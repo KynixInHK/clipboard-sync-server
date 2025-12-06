@@ -1,0 +1,37 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "clipboard-sync",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-12-05",
+	"observability": {
+		"enabled": true
+	},
+
+	/**
+	 * Durable Objects 配置
+	 * 这里定义了你的“房间”类
+	 */
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "CLIPBOARD_DO",
+				"class_name": "ClipboardRoom"
+			}
+		]
+	},
+
+	/**
+   * 数据库迁移配置
+   * 注意：免费版必须使用 "new_sqlite_classes"
+   */
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["ClipboardRoom"]
+		}
+	]
+}
