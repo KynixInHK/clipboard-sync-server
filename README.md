@@ -15,6 +15,15 @@
    cd clipboard-sync-server
    npm install
    ```
+
+2. 设定 API_KEY
+
+```bash
+pnpm wrangler secret put API_KEY
+```
+
+在提示中输入一个强壮的密钥，这个密钥将用于客户端和服务端的身份验证。**请牢记这个密钥，之后我们所有用到 token 的地方，指的都是它。**
+
 2. 直接运行：
 	```bash
  	npm run deploy
