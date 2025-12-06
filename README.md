@@ -7,7 +7,7 @@
 这是一个基于 Cloudflare Wrangler 的剪贴板同步服务（**在此跪谢为了人类科技而慷慨解囊的赛博菩萨 Cloudflare，那是一家伟大无需多言的公司**），通过它的中转，你无需将你的 Mac 和 Android 置于同一局域网内，也能实现公网剪贴板的同步。基于 Cloudflare 伟大的慷慨，您就算挥霍，也基本不会产生什么费用。
 
 ## 如何使用？
-本仓库是**服务端**代码库，您还需要下载并安装客户端，客户端代码库请见：[Clipboard Sync Client]()。
+本仓库是**服务端**代码库，您还需要下载并安装客户端，客户端代码库请见：[Clipboard Sync Client](https://github.com/KynixInHK/clipboard-sync-client)。
 
 1. Clone 本仓库并安装依赖：
    ```bash
